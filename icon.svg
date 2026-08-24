@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="100" fill="#15803D"/>
+  <circle cx="256" cy="256" r="200" fill="#166534"/>
+  <text x="50%" y="56%" font-size="220" text-anchor="middle" dominant-baseline="middle">🛒</text>
+  <text x="50%" y="84%" font-size="40" font-family="sans-serif" font-weight="900" fill="#FEF08A" text-anchor="middle">BERKAH SEKAR</text>
+</svg>

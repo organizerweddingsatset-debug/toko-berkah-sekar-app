@@ -1,0 +1,44 @@
+{
+  "name": "Toko Berkah Sekar",
+  "short_name": "Berkah Sekar",
+  "start_url": "/",
+  "id": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#15803D",
+  "theme_color": "#15803D",
+  "description": "Aplikasi Belanja Sembako Murah, Aneka Snack & Kebutuhan Dapur Toko Berkah Sekar",
+  "orientation": "portrait-primary",
+  "lang": "id",
+  "dir": "ltr",
+  "categories": ["shopping", "food", "lifestyle"],
+  "icons": [
+    {
+      "src": "/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/maskable-icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Toko Berkah Sekar"
+    }
+  ]
+}
