@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Berkah Sekar</string>
+    <string name="title_activity_main">Berkah Sekar</string>
+    <string name="package_name">com.berkahsekar.app</string>
+    <string name="custom_url_scheme">com.berkahsekar.app</string>
+</resources>

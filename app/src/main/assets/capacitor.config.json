@@ -1,0 +1,13 @@
+{
+	"appId": "com.berkahsekar.app",
+	"appName": "Berkah Sekar",
+	"webDir": "dist",
+	"bundledWebRuntime": false,
+	"server": {
+		"androidScheme": "https"
+	},
+	"android": {
+		"backgroundColor": "#15803D",
+		"allowMixedContent": true
+	}
+}
