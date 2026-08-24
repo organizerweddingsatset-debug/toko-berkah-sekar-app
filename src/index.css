@@ -1,0 +1,219 @@
+/* ==========================================================================
+   BERKAH SEKAR - 100% NATIVE ANDROID MOBILE APP UI DESIGN
+   ========================================================================== */
+
+:root {
+  /* Indonesian E-Grocery Native Brand Palette */
+  --primary: #15803D;          /* Fresh Grocery Emerald */
+  --primary-dark: #0F5128;
+  --primary-light: #22C55E;
+  --primary-surface: #EBF7EE;
+  
+  --accent-orange: #EA580C;     /* Promo Orange (Tokopedia/Shopee style) */
+  --accent-orange-subtle: #FFF7ED;
+  --accent-yellow: #F59E0B;
+
+  /* Native Android Light Theme */
+  --bg-main: #F4F6F5;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F0F3F1;
+  
+  --text-primary: #191C1B;
+  --text-secondary: #5E6D66;
+  --text-tertiary: #8C9B94;
+  --text-white: #FFFFFF;
+  
+  --border-light: #E4EBE7;
+  --border-card: #ECEEEF;
+  
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 9999px;
+  
+  /* Native Elevation Shadows */
+  --elevation-1: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --elevation-2: 0 3px 8px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
+  --elevation-3: 0 8px 20px rgba(0, 0, 0, 0.12);
+  --elevation-nav: 0 -3px 16px rgba(0, 0, 0, 0.06);
+
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-top: env(safe-area-inset-top, 0px);
+}
+
+/* Base App Setup - Fullscreen Native Viewport */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+html, body, #root {
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Native Android App Root Container */
+.native-app-container {
+  width: 100%;
+  max-width: 540px; /* Perfect centered on desktop/tablet, full 100% on phones */
+  margin: 0 auto;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--bg-main);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.04);
+}
+
+/* Scroll Area */
+.native-scroll-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: calc(72px + var(--safe-bottom));
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: contain;
+}
+
+.native-scroll-content::-webkit-scrollbar {
+  display: none;
+}
+.native-scroll-content {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Native Top App Bar */
+.native-app-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: #15803D;
+  background: linear-gradient(180deg, #126E33 0%, #15803D 100%);
+  color: #FFFFFF;
+  padding: calc(var(--safe-top) + 8px) 14px 12px 14px;
+  box-shadow: 0 2px 10px rgba(18, 110, 51, 0.2);
+}
+
+/* Native Material Navigation Bar */
+.native-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 540px;
+  height: calc(64px + var(--safe-bottom));
+  padding-bottom: var(--safe-bottom);
+  background: #FFFFFF;
+  border-top: 1px solid var(--border-light);
+  box-shadow: var(--elevation-nav);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 50;
+}
+
+/* Material You Active Pill */
+.nav-tab-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 0;
+  color: #64748B;
+  transition: all 0.15s ease;
+}
+
+.nav-icon-pill {
+  width: 46px;
+  height: 28px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-tab-btn.active .nav-icon-pill {
+  background-color: var(--primary-surface);
+  color: var(--primary);
+}
+
+.nav-tab-btn.active span {
+  color: var(--primary);
+  font-weight: 800;
+}
+
+.nav-tab-btn span {
+  font-size: 11px;
+  font-weight: 600;
+  margin-top: 2px;
+  letter-spacing: -0.1px;
+}
+
+/* Native Ripple Touch */
+.touch-feedback {
+  transition: transform 0.1s ease, opacity 0.1s ease;
+}
+.touch-feedback:active {
+  transform: scale(0.97);
+  opacity: 0.9;
+}
+
+/* Animation Keyframes */
+@keyframes sheetUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.animate-sheet-up {
+  animation: sheetUp 0.28s cubic-bezier(0.2, 0.9, 0.3, 1) forwards;
+}
+
+@keyframes fadeInFast {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade {
+  animation: fadeInFast 0.18s ease-out forwards;
+}
+
+/* Badge tags */
+.badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 7px;
+  border-radius: 6px;
+  font-size: 10.5px;
+  font-weight: 800;
+}
+.badge-promo { background: #EA580C; color: #FFFFFF; }
+.badge-fresh { background: #15803D; color: #FFFFFF; }
+.badge-gold { background: #D97706; color: #FFFFFF; }
