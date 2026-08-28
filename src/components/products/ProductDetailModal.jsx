@@ -66,7 +66,7 @@ export const ProductDetailModal = () => {
         style={{
           backgroundColor: '#FFFFFF',
           width: '100%',
-          maxWidth: '440px',
+          maxWidth: '100%',
           maxHeight: '92vh',
           borderTopLeftRadius: '28px',
           borderTopRightRadius: '28px',

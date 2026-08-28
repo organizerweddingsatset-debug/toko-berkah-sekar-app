@@ -1,5 +1,5 @@
 /* ==========================================================================
-   BERKAH SEKAR - 100% NATIVE ANDROID MOBILE APP UI DESIGN
+   BERKAH SEKAR - 100% FULL-SCREEN NATIVE ANDROID MOBILE APP UI DESIGN
    ========================================================================== */
 
 :root {
@@ -83,18 +83,15 @@ body {
   flex-direction: column;
 }
 
-/* Native Android App Root Container */
+/* Native Android App Root Container - 100% Full Screen Edge to Edge */
 .native-app-container {
   width: 100%;
-  max-width: 540px; /* Perfect centered on desktop/tablet, full 100% on phones */
-  margin: 0 auto;
   min-height: 100vh;
   min-height: 100dvh;
   background-color: var(--bg-main);
   display: flex;
   flex-direction: column;
   position: relative;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.04);
 }
 
 /* Main Content Area */
@@ -102,7 +99,6 @@ body {
   width: 100%;
   flex: 1;
   padding-bottom: calc(84px + var(--safe-bottom));
-  /* Allow natural document flow scrolling on mobile devices */
   touch-action: pan-y;
 }
 
@@ -119,22 +115,22 @@ body {
 .native-app-header {
   position: sticky;
   top: 0;
+  width: 100%;
   z-index: 40;
   background: #15803D;
   background: linear-gradient(180deg, #126E33 0%, #15803D 100%);
   color: #FFFFFF;
-  padding: calc(var(--safe-top) + 8px) 14px 12px 14px;
+  padding: calc(var(--safe-top) + 8px) 16px 12px 16px;
   box-shadow: 0 2px 10px rgba(18, 110, 51, 0.2);
 }
 
-/* Native Material Navigation Bar */
+/* Native Material Navigation Bar - Full Width Edge to Edge */
 .native-bottom-nav {
   position: fixed;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
   width: 100%;
-  max-width: 540px;
   height: calc(64px + var(--safe-bottom));
   padding-bottom: var(--safe-bottom);
   background: #FFFFFF;
@@ -163,7 +159,7 @@ body {
 }
 
 .nav-icon-pill {
-  width: 46px;
+  width: 52px;
   height: 28px;
   border-radius: 14px;
   display: flex;

@@ -233,7 +233,7 @@ export const MobileHeader = () => {
             style={{
               backgroundColor: '#FFFFFF',
               width: '100%',
-              maxWidth: '540px',
+              maxWidth: '100%',
               borderTopLeftRadius: '24px',
               borderTopRightRadius: '24px',
               padding: '20px',

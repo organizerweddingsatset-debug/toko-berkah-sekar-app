@@ -128,8 +128,8 @@ export const CheckoutModal = () => {
         style={{
           backgroundColor: '#FFFFFF',
           width: '100%',
-          maxWidth: '440px',
-          maxHeight: '94vh',
+          maxWidth: '100%',
+          maxHeight: '92vh',
           borderTopLeftRadius: '28px',
           borderTopRightRadius: '28px',
           display: 'flex',
