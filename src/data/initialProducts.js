@@ -82,7 +82,7 @@ export const INITIAL_PRODUCTS = [
     originalPrice: 19000,
     rating: 4.9,
     soldCount: 1420,
-    image: 'https://images.unsplash.com/photo-1581441363689-1f3c3c414635?w=600&auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1587734195503-904fca47e0e9?w=600&auto=format&fit=crop&q=80',
     tag: 'Sembako Wajib',
     tagType: 'promo',
     description: 'Gula pasir kristal yang diproduksi dari tebu alami berkualitas tinggi. Butiran gula halus, manis alami, dan cepat larut untuk teh, kopi, dan aneka kue.',

@@ -7,7 +7,7 @@ const StoreContext = createContext();
 export const StoreProvider = ({ children }) => {
   // Products with local storage persistence (version keyed to reset cleanly)
   const [products, setProducts] = useState(() => {
-    const saved = localStorage.getItem('berkah_sekar_grocery_products_v2');
+    const saved = localStorage.getItem('berkah_sekar_grocery_products_v3');
     return saved ? JSON.parse(saved) : INITIAL_PRODUCTS;
   });
 
@@ -103,7 +103,7 @@ export const StoreProvider = ({ children }) => {
 
   // Sync with Local Storage
   useEffect(() => {
-    localStorage.setItem('berkah_sekar_grocery_products_v2', JSON.stringify(products));
+    localStorage.setItem('berkah_sekar_grocery_products_v3', JSON.stringify(products));
   }, [products]);
 
   useEffect(() => {
